@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+/* ROOT PADRÃO DA PÁGINA INTEIRA */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* FORMATAÇÃO DO MENU E SIDEBAR */
+a {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  z-index: 500;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Raleway", serif;
+  background: black;
+  height: 8vh;
+  z-index: 500;
+  text-shadow: 0.01rem 0.1rem 1px rgba(0, 0, 0, 0.404);
+  line-height: 5rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
