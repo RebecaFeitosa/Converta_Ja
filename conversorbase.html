@@ -33,3 +33,45 @@
             </ul>
         </nav>
     </div>
+    <main>
+        <h1>Conversão de Bases Numéricas</h1>
+        <section class="conteudos">
+            <div class="form-group">
+                <label for="valorReal"><i><i class="fa-solid fa-calculator"></i></i></label>
+                <input type="number" placeholder="Decimal" name="decimal" id="decimal" class="input" step="0.01"
+                    min="0.00" max="9999999999.99" value="" tabindex="1" onClick="ativarBotao()"
+                    onChange="ativarBotao()" autofocus required />
+            </div>
+
+            <!--BINÁRIO-->
+            <div class="form-group">
+                <input type="radio" id="binario" name="basesNum" class="input radio" value="binario" tabindex="2" />
+                <label for="binario">Binario</label>
+
+                <!--OCTAL-->
+                <input type="radio" id='octal' name="basesNum" class="input radio" value="octal" tabindex="3" />
+                <label for="octal">Octal</label>
+
+                <!--HEXADECIMAL-->
+                <input type="radio" id="hexadecimal" name="basesNum" class="input radio" value="hexadecimal"
+                    tabindex="4" />
+                <label for="hexadecimal">Hexadecimal</label>
+            </div>
+
+            <!--BOTÕES CONVERTER E LIMPAR-->
+            <div class="form-group">
+                <button class='desativado botao' id='btnConverter' onClick='ativarBotao(); bloquearBotao()'
+                    disabled>Converter</button>
+                <button type="reset" class='botao' id='btnLimpar' tabindex="7">Limpar</button>
+            </div>
+        </section>
+
+        <!--MENSAGEM DE AVISO-->
+        <div class="instrucoes">
+            <p class="centro" id="aviso">Digite um valor, escolha a base e ConvertaJá</p>
+        </div>
+        <br>
+    </main>
+</body>
+
+</html>
