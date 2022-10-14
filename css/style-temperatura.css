@@ -201,3 +201,50 @@ label:first-child {
   font-size: 1.75rem;
   margin-right: 0.5rem;
 }
+
+.input,
+#peso,
+#altura {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.radio {
+  border: 1px solid #d50000;
+  margin-left: 0.75rem;
+}
+
+.botao {
+  margin-top: 0.625rem;
+  margin-left: 1.5rem;
+  padding: 8px;
+}
+
+#btnConverter,
+#btnLimpar {
+  font-size: 1.5rem;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+}
+
+#btnLimpar {
+  cursor: pointer;
+  margin-left: 0.625rem;
+  background: #d50000;
+}
+
+#btnConverter {
+  cursor: not-allowed;
+}
+
+#btnConverter:hover,
+#btnLimpar:hover {
+  box-shadow: 0px 0px 15px #ffc107;
+}
