@@ -32,3 +32,40 @@
                 </ul>
             </nav>
         </div>
+        <main>
+            <h1>Conversor de Temperatura</h1>
+            <section class="conteudos">
+                <div class="form-group">
+                    <label for="numDigitado"><i class=""><i class="fa-solid fa-temperature-high"></i></i></label>
+                    <input type="number" name="numDigitado" id="numDigitado" class="input" step="0.01" min="0.00"
+                        max="9999999999.99" value="" tabindex="1" onClick="ativarBotao()" onChange="ativarBotao()"
+                        autofocus required />
+                </div>
+                <!-- FAHRENHEIT -->
+                <div class="form-group">
+                    <input type="radio" id="horas" name="selectTemp" class="input radio" value="Fahrenheit"
+                        tabindex="2" />
+                    <label for="fahrenheit">Fahrenheit</label>
+                    <!-- CELSIUS -->
+                    <input type="radio" id="minutos" name="selectTemp" class="input radio" value="Celsius"
+                        tabindex="3" />
+                    <label for="Celsius">Celsius</label>
+                </div>
+
+                <!--BOTÕES CONVERTER E LIMPAR-->
+                <div class="form-group">
+                    <button class='desativado botao' id='btnConverter' onClick='ativarBotao(); bloquearBotao()'
+                        disabled>Converter</button>
+                    <button type="reset" class='botao' id='btnLimpar' tabindex="7">Limpar</button>
+                </div>
+            </section>
+
+            <!--MENSAGEM DE AVISO-->
+            <div class="instrucoes">
+                <p class="centro" id="aviso">Digite o número a ser convertido e escolhe a conversão.</p>
+            </div>
+            <br>
+        </main>
+    </body>
+
+</html>
