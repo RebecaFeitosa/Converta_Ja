@@ -99,9 +99,6 @@ class MobileNavbar {
     const peso = Number(inputPeso.value); //pegando o valor do input
     const altura = Number(inputAltura.value);
   
-  
-  
-  
     const imc = getImc(peso, altura);
     const nivelImc = getNivelImc(imc);
   
@@ -120,14 +117,12 @@ class MobileNavbar {
     if (imc >= 18.5) return nivel[1];
     if (imc < 18.5) return nivel[0];
   
-  
   }
   
   function getImc(peso, altura) { // funcao para conversao, forumula
-    const imc = peso / altura ** 2;
+    const imc = peso / altura **2;
     return imc.toFixed(2); //casas decimais
   }
-  
   
   function criarP() { //  funcao  para  criar um paragrafo 
     const p = document.createElement('p'); // criando um elemento 
@@ -139,8 +134,6 @@ class MobileNavbar {
     result.innerHTML = ''; // limpar o html, deixa a div em braco
   
     const p = criarP();
-  
-  
   
     p.innerHTML = msg;
     result.appendChild(p);
