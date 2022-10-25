@@ -1,18 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
-@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"); /*Font-family tamanhos*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"); /* Font */
+@import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"); /*flation icone*/
+
 /* ROOT PADRÃO DA PÁGINA INTEIRA */
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 /* FORMATAÇÃO DO MENU E SIDEBAR */
+
 a {
   color: rgb(255, 255, 255);
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
 }
+
 a:hover {
   opacity: 0.7;
 }
@@ -29,26 +35,30 @@ nav {
   justify-content: space-around;
   align-items: center;
   font-family: "Raleway", serif;
-  background: black;
+  background-image: black;
   height: 8vh;
   z-index: 500;
-  text-shadow: 0.01rem 0.1rem 1px rgba(0, 0, 0, 0.404);
+  text-shadow: 0.01rem 0.2rem 1px rgba(0, 0, 0, 0.404);
   line-height: 5rem;
 }
+
 .nav-list {
   list-style: none;
   display: flex;
 }
+
 .nav-list li {
   letter-spacing: 3px;
   margin-left: 32px;
   z-index: 500;
   font-size: 1.5rem;
 }
+
 .mobile-menu {
   display: none;
   cursor: pointer;
 }
+
 .mobile-menu div {
   width: 32px;
   height: 2px;
@@ -57,6 +67,7 @@ nav {
   transition: 0.3s;
   z-index: 500;
 }
+
 @media (max-width: 999px) {
   body {
     overflow-x: hidden;
@@ -67,7 +78,7 @@ nav {
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: rgba(0, 0, 0, 0.28);
+    background: rgb(0, 0, 0);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -83,9 +94,11 @@ nav {
     z-index: 500;
   }
 }
+
 .nav-list.active {
   transform: translateX(0);
 }
+
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -96,72 +109,156 @@ nav {
     transform: translateX(0);
   }
 }
+
 .mobile-menu.active .line1 {
   transform: rotate(-45deg) translate(-8px, 8px);
   z-index: 500;
 }
+
 .mobile-menu.active .line2 {
   opacity: 0;
   z-index: 500;
 }
+
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
   z-index: 500;
 }
-/* FORMATAÇÃO DO CABEÇALHO */
-header {
+
+/* FORMATAÇÃO CONVERSOR DE MOEDAS */
+
+body {
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  position: absolute;
+  background: rgb(0, 0, 0);
+  color: #fff;
 }
-.img-background {
+
+main {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.7);
-  animation: zoom 8s;
+  padding: 1rem; /* espacamento interno */
+  background: linear-gradient(to right, rgb(0, 0, 0), #ff940b);
 }
-/* ANIMAÇÃO DA IMAGEM DE FUNDO E DO TITULO */
-@keyframes zoom {
-  0% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes movimentoTitulo {
-  0% {
-    transform: translateY(50rem);
-  }
-  100% {
-    transform: translateY(0rem);
-  }
-}
-/* FORMATAÇÃO IMAGEM DE FUNDO E DO TITULO */
-.img-background img {
+
+section {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.5;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-bottom: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.titulo {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 35%;
-  left: 35%;
-  margin: -25px 0 0 -25px;
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-top: 3rem;
+  font-family: "Montserrat", serif;
 }
-.titulo h1 {
-  color: rgb(255, 255, 255);
-  font-size: calc(1em + 5vw);
+
+.instrucoes {
+  max-width: 480px;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 0 0.625rem 0.625rem;
+  background: #fff;
+}
+
+.instrucoes p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+#titulo,
+#dica {
+  background: #111;
+  color: #ececec;
+  padding: 2px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+#titulo {
+  margin-bottom: 0.625rem;
+}
+
+.centro {
+  margin-top: 0.625rem;
+  text-align: center;
+}
+
+label {
   font-family: "Source Sans Pro", serif;
-  font-weight: 700;
-  text-shadow: 0.01rem 0.2rem 1px rgba(0, 0, 0, 0.404);
-  line-height: 5rem;
-  margin-bottom: 0.1rem;
-  letter-spacing: 2px;
-  animation: movimentoTitulo 3s;
-} 
+  font-weight: 500;
+  font-size: 22px;
+}
+
+label:first-child {
+  font-size: 1.75rem;
+  margin-right: 0.5rem;
+}
+
+.input,
+#peso,
+#altura {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.radio {
+  border: 1px solid #d50000;
+  margin-left: 0.75rem;
+}
+
+.botao {
+  margin-top: 0.625rem;
+  margin-left: 1.5rem;
+  padding: 8px;
+}
+
+#btnConverter,
+#btnLimpar {
+  font-size: 1.5rem;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  outline: none;
+}
+
+#btnLimpar {
+  cursor: pointer;
+  margin-left: 0.625rem;
+  background: #d50000;
+}
+
+#btnConverter {
+  cursor: not-allowed;
+}
+
+#btnConverter:hover,
+#btnLimpar:hover {
+  box-shadow: 0px 0px 15px #ffc107;
+}
+
+/* Paragrafo com ID aviso */
+#aviso {
+  padding: 5px;
+  color: #191919;
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+}
+
+/* Animar o input */
+
+i {
+  color: green;
+}
