@@ -68,4 +68,66 @@ class MobileNavbar {
     console.log(" A temperatura convertida é " + Converte);
     aviso.textContent = "O valor digitado " + numDigitado + " " + selectTemp + " convertido vira: " + Converte;
   }
-  
+  /* VERIFICAR SE FOI DIGITADO ALGUM VALOR PARA PODER CONVERTER */
+
+  function bloquearBotao() {
+  if (valorDigitado.value == 0 || valorDigitado == '' || valorDigitado == null || numDigitado.value == 0) {
+    btnConverter.setAttribute("disabled", "disabled");
+    btnConverter.style.background = "#ccc";
+    btnConverter.style.cursor = "not-allowed";
+    console.log("botao bloqueado")
+    aviso.textContent = "Escolha uma conversão!";
+  }
+}
+// REATIVAR BOTAO
+function ativarBotao() {
+  if (valorDigitado.value > 0) {
+    btnConverter.removeAttribute("disabled");
+    btnConverter.style.background = "#32CD32";
+    btnConverter.style.cursor = "pointer";
+  } else {
+    console.log("Não ativou");
+  }
+}
+
+
+btnConverter.addEventListener('click', function () {
+
+  numDigitado = parseFloat(valorDigitado.value);
+
+
+  for (let i = 0; i < Horas_Minutos.length; i++) {
+    if (Horas_Minutos[i].checked) {
+      selectTemp = Horas_Minutos[i].value;
+      console.log(selectTemp); //
+    }
+  }
+
+  switch (selectTemp) {
+
+    case "Fahrenheit":
+      Converte = (numDigitado - 32) / 1.8;
+      mensagemFormatada(parseFloat(Converte.toFixed(2)) + "°C");
+      break;
+
+    case "Celsius":
+      Converte = (numDigitado * 9 / 5) + 32;  // tranforma Celsius em Fahrenheit  ex: (20 °C × 9/5) + 32 = 68 °F
+      mensagemFormatada(parseFloat(Converte.toFixed(2)) + "°F");
+      break;
+
+
+    default:
+      aviso.textContent = "Escolha uma conversão!";
+
+      isNaN(Converte) ? Converte = 0 : "";
+  }
+});
+
+btnLimpar.addEventListener("click", function () {
+  valorDigitado.focus()
+  valorDigitado.value = "";
+  aviso.textContent = "Digite o valor, escolha a temperatura e ConvertaJá";
+  Horas_Minutos[0].checked = false;
+  Horas_Minutos[1].checked = false;
+
+});
