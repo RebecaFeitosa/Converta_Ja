@@ -14,3 +14,31 @@
     <script src="js/script-moedas.js" defer></script>
     <title>Conversor de Moedas - ConvertaJá</title>
 </head>
+
+<body>
+    <div>
+        <nav>
+            <a class="logo" href="index.html">Borá converter?</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="conversorhoras.html">Horas</a></li>
+                <li><a href="conversortemperatura.html">Temperatura</a></li>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="conversorbase.html">Base</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <h1>Conversor de Moedas</h1>
+        <section class="conteudos">
+            <div class="form-group">
+                <label for="valorReal"><i class="fa-solid fa-sack-dollar"></i></i></i></label>
+                <input type="number" name="valorReal" id="valorReal" class="input" step="0.01" min="0.00"
+                    max="9999999999.99" value="" tabindex="1" onClick="ativarBotao()" onChange="ativarBotao()" autofocus
+                    required />
+            </div>
