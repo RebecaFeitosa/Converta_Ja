@@ -71,3 +71,58 @@ let valorEuro = 5.12;     // dia 21/09/2022
 let valorLibra = 5.87;     // dia 21/09/2022
 let valorYuan = 1.36;     // dia 21/09/2022
 let valorReal = 0;
+
+let moedaEstrangeira = "";
+let moedaConvertida = 0.00;
+
+// MENSAGEM FORMATADA PARA EXIBIR VALORES MONETARIOS
+function mensagemFormatada(moedaConvertida) {
+  isNaN(valorReal) ? valorReal = 0 : "";
+  console.log("Moeda Convertida " + moedaConvertida);
+  aviso.textContent = "O valor " + (valorReal).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }) + " convertido em " + moedaEstrangeira + " é " + moedaConvertida;
+}
+
+/* VERIFICAR SE FOI DIGITADO ALGUM VALOR PARA PODER CONVERTER */
+function bloquearBotao() {
+  if (valorDigitado.value == 0 || valorDigitado == '' || valorDigitado == null || valorReal == null) {
+    btnConverter.setAttribute("disabled", "disabled");
+    btnConverter.style.background = "#ccc";
+    btnConverter.style.cursor = "not-allowed";
+  }
+}
+
+// REATIVAR BOTAO
+function ativarBotao() {
+  if (valorDigitado.value > 0) {
+    btnConverter.removeAttribute("disabled");
+    btnConverter.style.background = "#32CD32";
+    btnConverter.style.cursor = "pointer";
+  } else {
+    console.log("Não ativou");
+  }
+}
+
+
+btnConverter.addEventListener('click', function () {
+
+  valorReal = parseFloat(valorDigitado.value);
+
+  console.log('Escolhe a moeda estrangeira');
+  for (let i = 0; i < moedaSelecionada.length; i++) {
+    if (moedaSelecionada[i].checked) {
+      moedaEstrangeira = moedaSelecionada[i].value;
+      console.log(moedaEstrangeira);
+    }
+  }
+
+  switch (moedaEstrangeira) {
+
+    case "Dólar":
+      moedaConvertida = valorReal / valorDolar;
+      mensagemFormatada(moedaConvertida.toLocaleString("en-US", { style: "currency", currency: "USD" }));
+      break
+
+    case "Euro":
+      moedaConvertida = valorReal / valorEuro;
+      mensagemFormatada(moedaConvertida.toLocaleString("de-DE", { style: "currency", currency: "EUR" }));
+      break
