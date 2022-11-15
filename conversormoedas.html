@@ -60,3 +60,20 @@
                 <input type="radio" id="yuan" name="moedaEstrangeira" class="input radio" value="Yuan" tabindex="5" />
                 <label for="yuan">Yuan</label>
             </div>
+            
+            <!--BOTÕES CONVERTER E LIMPAR-->
+            <div class="form-group">
+                <button class='desativado botao' id='btnConverter' onClick='ativarBotao(); bloquearBotao()'
+                    disabled>Converter</button>
+                <button type="reset" class='botao' id='btnLimpar' tabindex="7">Limpar</button>
+            </div>
+        </section>
+
+        <!--MENSAGEM DE AVISO-->
+        <div class="instrucoes">
+            <p class="centro" id="aviso">Digite um valor, escolha a moeda e ConvertaJá</p>
+        </div>
+    </main>
+</body>
+
+</html>
