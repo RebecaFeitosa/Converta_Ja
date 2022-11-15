@@ -126,3 +126,32 @@ btnConverter.addEventListener('click', function () {
       moedaConvertida = valorReal / valorEuro;
       mensagemFormatada(moedaConvertida.toLocaleString("de-DE", { style: "currency", currency: "EUR" }));
       break
+      case "Libra":
+        moedaConvertida = valorReal / valorLibra;
+        mensagemFormatada(moedaConvertida.toLocaleString("en-GB", { style: "currency", currency: "GBP" }));
+        break
+  
+      case "Yuan":
+        moedaConvertida = valorReal / valorYuan;
+        mensagemFormatada(parseFloat(moedaConvertida).toLocaleString("zh-CN", { style: "currency", currency: "CNY" }));
+        break
+  
+      default:
+        aviso.textContent = "Escolha uma moeda para conversão!";
+  
+        isNaN(moedaConvertida) ? moedaConvertida = 0 : "";
+    }
+  
+  })
+  
+  btnLimpar.addEventListener("click", function () {
+    valorDigitado.focus();
+    valorDigitado.value = "";
+    aviso.textContent = "Digite o valor, escolha a moeda e ConvertaJá";
+    moedaSelecionada[0].checked = false;
+    moedaSelecionada[1].checked = false;
+    moedaSelecionada[2].checked = false;
+    moedaSelecionada[3].checked = false;
+  })
+  
+  
