@@ -66,10 +66,10 @@ let aviso = document.querySelector("#aviso");
 let btnConverter = document.querySelector("#btnConverter");
 let btnLimpar = document.querySelector("#btnLimpar");
 
-let valorDolar = 5.18;      // dia 21/09/2022
-let valorEuro = 5.12;     // dia 21/09/2022
-let valorLibra = 5.87;     // dia 21/09/2022
-let valorYuan = 1.36;     // dia 21/09/2022
+let valorDolar = 5.32;      // dia 16/11/2022
+let valorEuro = 5.54;     // dia 16/11/2022
+let valorLibra = 6.34;     // dia 16/11/2022
+let valorYuan = 0.75;     // dia 16/11/2022
 let valorReal = 0;
 
 let moedaEstrangeira = "";
