@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <link rel="icon" href="img/favicon.ico" />
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-        <link rel="manifest" href="site.webmanifest" />
-        <link rel="stylesheet" href="css/style-temperatura.css">
-        <script src="js/script-temperatura.js" defer></script>
-        <title>Conversor de Temperatura - ConvertaJá</title>
-    </head>
-    
-    <body>
-        <div>
-            <nav>
-                <a class="logo" href="index.html">Borá converter?</a>
-                <div class="mobile-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="conversormoedas.html">Moedas</a></li>
-                    <li><a href="conversorhoras.html">Horas</a></li>
-                    <li><a href="imc.html">IMC</a></li>
-                    <li><a href="conversorbase.html">Base</a></li>
-                </ul>
-            </nav>
-        </div>
-        <main>
-            <h1>Conversor de Temperatura</h1>
-            <section class="conteudos">
-                <div class="form-group">
-                    <label for="numDigitado"><i class=""><i class="fa-solid fa-temperature-high"></i></i></label>
-                    <input type="number" name="numDigitado" id="numDigitado" class="input" step="0.01" min="0.00"
-                        max="9999999999.99" value="" tabindex="1" onClick="ativarBotao()" onChange="ativarBotao()"
-                        autofocus required />
-                </div>
-                <!-- FAHRENHEIT -->
-                <div class="form-group">
-                    <input type="radio" id="horas" name="selectTemp" class="input radio" value="Fahrenheit"
-                        tabindex="2" />
-                    <label for="fahrenheit">Fahrenheit</label>
-                    <!-- CELSIUS -->
-                    <input type="radio" id="minutos" name="selectTemp" class="input radio" value="Celsius"
-                        tabindex="3" />
-                    <label for="Celsius">Celsius</label>
-                </div>
 
-                <!--BOTÕES CONVERTER E LIMPAR-->
-                <div class="form-group">
-                    <button class='desativado botao' id='btnConverter' onClick='ativarBotao(); bloquearBotao()'
-                        disabled>Converter</button>
-                    <button type="reset" class='botao' id='btnLimpar' tabindex="7">Limpar</button>
-                </div>
-            </section>
+<head>
+    <link rel="icon" href="img/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="css/style-temperatura.css">
+    <script src="js/script-temperatura.js" defer></script>
+    <title>Conversor de Temperatura - ConvertaJá</title>
+</head>
 
-            <!--MENSAGEM DE AVISO-->
-            <div class="instrucoes">
-                <p class="centro" id="aviso">Digite o número a ser convertido e escolhe a conversão.</p>
+<body>
+    <div>
+        <nav>
+            <a class="logo" href="index.html">Borá converter?</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
-            <br>
-        </main>
-    </body>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="conversormoedas.html">Moedas</a></li>
+                <li><a href="conversorhoras.html">Horas</a></li>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="conversorbase.html">Base</a></li>
+                <li><a href="sobre.html">Sobre nós</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <h1>Conversor de Temperatura</h1>
+        <section class="conteudos">
+            <div class="form-group">
+                <label for="numDigitado"><i class=""><i class="fa-solid fa-temperature-high"></i></i></label>
+                <input type="number" name="numDigitado" id="numDigitado" class="input" step="0.01" min="0.00"
+                    max="9999999999.99" value="" tabindex="1" onClick="ativarBotao()" onChange="ativarBotao()" autofocus
+                    required />
+            </div>
+            <!-- FAHRENHEIT -->
+            <div class="form-group">
+                <input type="radio" id="horas" name="selectTemp" class="input radio" value="Fahrenheit" tabindex="2" />
+                <label for="fahrenheit">Fahrenheit</label>
+                <!-- CELSIUS -->
+                <input type="radio" id="minutos" name="selectTemp" class="input radio" value="Celsius" tabindex="3" />
+                <label for="Celsius">Celsius</label>
+            </div>
+
+            <!--BOTÕES CONVERTER E LIMPAR-->
+            <div class="form-group">
+                <button class='desativado botao' id='btnConverter' onClick='ativarBotao(); bloquearBotao()'
+                    disabled>Converter</button>
+                <button type="reset" class='botao' id='btnLimpar' tabindex="7">Limpar</button>
+            </div>
+        </section>
+
+        <!--MENSAGEM DE AVISO-->
+        <div class="instrucoes">
+            <p class="centro" id="aviso">Digite o número a ser convertido e escolhe a conversão.</p>
+        </div>
+        <br>
+    </main>
+</body>
 
 </html>
