@@ -253,13 +253,6 @@ label:first-child {
   font-weight: 500;
 }
 
-#imgMoedas {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
 i {
   color: green;
 }

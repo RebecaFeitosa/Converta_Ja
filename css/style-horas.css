@@ -253,27 +253,6 @@ label:first-child {
   font-weight: 500;
 }
 
-#imgMoedas {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-/* Animar o input */
-@keyframes piscar {
-  0% {
-    /* box-shadow: 0 0 25px #ffc107; */
-    filter: drop-shadow(0 0 25px #ffc107);
-    -webkit-filter: drop-shadow(0 0 25px #ffc107);
-    -moz-filter: drop-shadow(0 0 25px #ffc107);
-    -o-filter: drop-shadow(0 0 25px #ffc107);
-    -ms-filter: drop-shadow(0 0 25px #ffc107);
-  }
-  100% {
-  }
-}
-
 i {
   color: green;
 }
